@@ -1,31 +1,46 @@
 const getSleepHours = day => {
 
-  if (day === 'Monday') {
-    return 8;
+  switch(day) {
+    case 'Monday':
+    return 8
+    break;
+    case 'Tuesday':
+    return 5
+    break;
+    case 'Wednesday':
+    return 6
+    break;
+    case 'Thursday':
+    return 8
+    break;
+    case 'Friday':
+    return 6
+    break;
+    case 'Saturday':
+    return 8
+    break;
+    case 'Sunday':
+    return 4
+    break;
+    
+    default:
+    return 'Please enter a day of the week!'
   }
-  else if (day === 'Tuesday') {
-    return 7;
-  }
-  else if (day === 'Wednesday') {
-    return 8;
-  }
-  else if (day === 'Thursay') {
-    return 8;
-  }
-  else if (day === 'Friday') {
-    return 8;
-  }
-  else if (day === 'Saturday') {
-    return 8;
-  }
-  else if (day === 'Sunday') {
-    return 8;
-  }
-  else {
-    return 'Please enter a day of the week';
-  }
-  
-  const
-  
-  
   };
+  
+  const getActualSleepHours = () =>  
+    getSleepHours('Monday') +
+    getSleepHours('Tuesday') +
+    getSleepHours('Wednesday') +
+    getSleepHours('Thursday') +
+    getSleepHours('Friday') +
+    getSleepHours('Saturday') +
+    getSleepHours('Sunday');
+  
+  
+  console.log(getSleepHours('Monday'));
+  console.log(getActualSleepHours());
+  
+  
+  
+  
